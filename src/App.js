@@ -50,6 +50,6 @@ export default App;
 <input type="number" placeholder="Enter Value Here" value={sum} onChange={val => setSum(val1 * val2)} />
 
 uruchomić sobie kod w przeglądarce i przejrzeć funckjonalność
-zainstalować sobie visual studia do nauki C#
+
 
 */
