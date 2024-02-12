@@ -2,9 +2,14 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [amount, setAmount] = useState('');
-  const [dailyExpenses, setDailyExpenses] = useState('');
-  const [odds, setOdds] = useState('');
+  const [amount, setAmount] = useState("");
+  const [groceries, setGroceries] = useState("");
+  const [house, setHouse] = useState("");
+  const [car, setCar] = useState("");
+  const [clothes, setClothes] = useState("");
+  const [eatingOut, setEatingOut] = useState("");
+  const [savings, setSavings] = useState("");
+  const [odds, setOdds] = useState("");
 
   return (
     <main className="App">
@@ -22,17 +27,51 @@ function App() {
           value={amount}
           onChange={(e) => setAmount(e.target.value)}
         />
-        <label>Daily expenses:</label>
+        <label>Groceries:</label>
         <input
           type="number"
-          value={dailyExpenses}
-          onChange={(e) => setDailyExpenses(e.target.value)}
+          value={groceries}
+          onChange={(e) => setGroceries(e.target.value)}
+        />
+        <label>House:</label>
+        <input
+          type="number"
+          value={house}
+          onChange={(e) => setHouse(e.target.value)}
+        />
+        <label>Car:</label>
+        <input
+          type="number"
+          value={car}
+          onChange={(e) => setCar(e.target.value)}
+        />
+        <label>Clothes:</label>
+        <input
+          type="number"
+          value={clothes}
+          onChange={(e) => setClothes(e.target.value)}
+        />
+        <label>Eating out:</label>
+        <input
+          type="number"
+          value={eatingOut}
+          onChange={(e) => setEatingOut(e.target.value)}
+        />
+        <label>Savings:</label>
+        <input
+          type="number"
+          value={savings}
+          onChange={(e) => setSavings(e.target.value)}
         />
         <label>How much left</label>
         <input
           type="number"
           value={odds}
-          onChange={(odds) => setOdds(amount - dailyExpenses)}
+          onChange={(odds) =>
+            setOdds(
+              amount - groceries - house - car - clothes - eatingOut - savings
+            )
+          }
         />
       </section>
     </main>
@@ -43,13 +82,6 @@ export default App;
 
 /*
 
-<input type="number" placeholder="Enter Value Here" value={val1} onChange={e => setVal1(e.target.value)} />
-
-<input type="number" placeholder="Enter Value Here" value={val2} onChange={e => setVal2(e.target.value)} />
-
-<input type="number" placeholder="Enter Value Here" value={sum} onChange={val => setSum(val1 * val2)} />
-
-uruchomić sobie kod w przeglądarce i przejrzeć funckjonalność
 
 
 */
