@@ -67,7 +67,7 @@ function App() {
         <input
           type="number"
           value={odds}
-          onChange={(odds) =>
+          onMouseMove={(odds) =>
             setOdds(
               amount - groceries - house - car - clothes - eatingOut - savings
             )
