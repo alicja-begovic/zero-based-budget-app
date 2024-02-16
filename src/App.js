@@ -16,6 +16,7 @@ function App() {
     <main className="App">
       <header className="App-header">
         <h1>Zero Base Budget App</h1>
+        <p>How much left: {calc}</p>
       </header>
       <section>
         <label>Amount:</label>
@@ -60,9 +61,6 @@ function App() {
           value={savings}
           onChange={(e) => setSavings(e.target.value)}
         />
-      </section>
-      <section>
-        <h3>How much left: {calc}</h3>
       </section>
     </main>
   );
