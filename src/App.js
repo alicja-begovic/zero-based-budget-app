@@ -9,7 +9,6 @@ function App() {
   const [clothes, setClothes] = useState("");
   const [eatingOut, setEatingOut] = useState("");
   const [savings, setSavings] = useState("");
-  const [odds, setOdds] = useState("");
 
   let calc = amount - groceries - house - car - clothes - eatingOut - savings;
 
@@ -17,10 +16,6 @@ function App() {
     <main className="App">
       <header className="App-header">
         <h1>Zero Base Budget App</h1>
-        <p>
-          Just write amount of money which you whant to manage and enjoy stress
-          free calculations.
-        </p>
       </header>
       <section>
         <label>Amount:</label>
@@ -65,12 +60,10 @@ function App() {
           value={savings}
           onChange={(e) => setSavings(e.target.value)}
         />
-        <label>How much left</label>
-        <input
-          type="number"
-          value={odds}
-          onMouseMove={(odds) => setOdds(calc)}
-        />
+      </section>
+      <section>
+        <h3>How much left</h3>
+        <div>{calc}</div>
       </section>
     </main>
   );
@@ -81,10 +74,10 @@ export default App;
 /*
 
 so thinks which I need to change in this project:
-- delete description, I think that is not now necessary
-- input "how much left" change on div
-- make from how much left just function which is showing result of calculation
-- function which is refreshing everytime when user writing some ammount
-- found solutions in the internet
+- delete description, I think that is not now necessary 😁
+- input "how much left" change on div 😁
+- make from how much left just function which is showing result of calculation - it wasn't necessary 😁
+- function which is refreshing everytime when user writing some ammount 😆
+- found solutions in the internet 😅
 
 */
