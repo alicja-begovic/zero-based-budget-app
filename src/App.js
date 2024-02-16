@@ -62,8 +62,7 @@ function App() {
         />
       </section>
       <section>
-        <h3>How much left</h3>
-        <div>{calc}</div>
+        <h3>How much left: {calc}</h3>
       </section>
     </main>
   );
