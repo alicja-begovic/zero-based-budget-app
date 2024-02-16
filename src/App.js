@@ -11,6 +11,8 @@ function App() {
   const [savings, setSavings] = useState("");
   const [odds, setOdds] = useState("");
 
+  let calc = amount - groceries - house - car - clothes - eatingOut - savings;
+
   return (
     <main className="App">
       <header className="App-header">
@@ -67,11 +69,7 @@ function App() {
         <input
           type="number"
           value={odds}
-          onMouseMove={(odds) =>
-            setOdds(
-              amount - groceries - house - car - clothes - eatingOut - savings
-            )
-          }
+          onMouseMove={(odds) => setOdds(calc)}
         />
       </section>
     </main>
@@ -82,6 +80,11 @@ export default App;
 
 /*
 
-
+so thinks which I need to change in this project:
+- delete description, I think that is not now necessary
+- input "how much left" change on div
+- make from how much left just function which is showing result of calculation
+- function which is refreshing everytime when user writing some ammount
+- found solutions in the internet
 
 */
