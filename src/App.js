@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Header from "./components/Header.jsx";
 import classes from "./App.css";
 
 function App() {
@@ -14,11 +15,9 @@ function App() {
 
   return (
     <main className="App">
-      <header className="App-header">
-        <h1>Zero Base Budget App</h1>
-        <p>How much left: {calc}</p>
-      </header>
+      <Header />
       <form className={classes.control}>
+        <p>How much left: {calc}</p>
         <div className={classes.control}>
           <label>Amount:</label>
           <input
