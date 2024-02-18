@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import classes from "./App.css";
 
 function App() {
   const [amount, setAmount] = useState("");
@@ -18,50 +18,64 @@ function App() {
         <h1>Zero Base Budget App</h1>
         <p>How much left: {calc}</p>
       </header>
-      <section>
-        <label>Amount:</label>
-        <input
-          type="number"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-        <label>Groceries:</label>
-        <input
-          type="number"
-          value={groceries}
-          onChange={(e) => setGroceries(e.target.value)}
-        />
-        <label>House:</label>
-        <input
-          type="number"
-          value={house}
-          onChange={(e) => setHouse(e.target.value)}
-        />
-        <label>Car:</label>
-        <input
-          type="number"
-          value={car}
-          onChange={(e) => setCar(e.target.value)}
-        />
-        <label>Clothes:</label>
-        <input
-          type="number"
-          value={clothes}
-          onChange={(e) => setClothes(e.target.value)}
-        />
-        <label>Eating out:</label>
-        <input
-          type="number"
-          value={eatingOut}
-          onChange={(e) => setEatingOut(e.target.value)}
-        />
-        <label>Savings:</label>
-        <input
-          type="number"
-          value={savings}
-          onChange={(e) => setSavings(e.target.value)}
-        />
-      </section>
+      <form className={classes.control}>
+        <div className={classes.control}>
+          <label>Amount:</label>
+          <input
+            type="number"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Groceries:</label>
+          <input
+            type="number"
+            value={groceries}
+            onChange={(e) => setGroceries(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>House:</label>
+          <input
+            type="number"
+            value={house}
+            onChange={(e) => setHouse(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Car:</label>
+          <input
+            type="number"
+            value={car}
+            onChange={(e) => setCar(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Clothes:</label>
+          <input
+            type="number"
+            value={clothes}
+            onChange={(e) => setClothes(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Eating out:</label>
+          <input
+            type="number"
+            value={eatingOut}
+            onChange={(e) => setEatingOut(e.target.value)}
+          />
+        </div>
+        <div>
+          <label>Savings:</label>
+          <input
+            type="number"
+            value={savings}
+            onChange={(e) => setSavings(e.target.value)}
+          />
+        </div>
+      </form>
     </main>
   );
 }
