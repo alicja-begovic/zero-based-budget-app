@@ -45,3 +45,11 @@ textarea:focus {
   outline: none;
   border-color: #1b0976;
 }
+
+form {
+  margin: 2rem;
+}
+
+.div {
+  margin: 1rem;
+}
