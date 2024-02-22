@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from './Form.modules.css'
+import classes from "./Form.modules.css";
 
 export default function Form() {
   const [amount, setAmount] = useState("");
@@ -11,9 +11,12 @@ export default function Form() {
   const [savings, setSavings] = useState("");
 
   let calc = amount - groceries - house - car - clothes - eatingOut - savings;
+
   return (
     <form className={classes.control}>
-      <p>How much left: {calc}</p>
+      <p>
+        <strong>How much left: {calc}</strong>
+      </p>
       <div className={classes.control}>
         <label>Amount:</label>
         <input
