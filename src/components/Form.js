@@ -1,5 +1,5 @@
 import { useState } from "react";
-import classes from '../App.css'
+import classes from './Form.modules.css'
 
 export default function Form() {
   const [amount, setAmount] = useState("");
