@@ -18,5 +18,12 @@ main {
   background-color: aliceblue;
   width: 30vw;
   border-radius: 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
+}
+
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 60vw;
+  }
 }
