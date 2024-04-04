@@ -15,7 +15,9 @@ export default function Form() {
   return (
     <form className={classes.control}>
       <p>
-        <strong>How much left: {calc}</strong>
+        <strong style={{color: calc < 0 ?  'red' : 'blue'}}>
+          How much left: {calc}
+        </strong>
       </p>
       <div className={classes.control}>
         <label>Amount:</label>
