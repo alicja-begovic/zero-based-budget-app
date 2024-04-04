@@ -78,3 +78,5 @@ export default function Form() {
     </form>
   );
 }
+
+// <strong style={{color: calc < 0 ?  'red' : 'blue'}}> I need to remember that this is function so needs to be double prentasis
