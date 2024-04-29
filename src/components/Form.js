@@ -10,7 +10,7 @@ export default function Form() {
   const [eatingOut, setEatingOut] = useState("");
   const [savings, setSavings] = useState("");
 
-  let calc = amount - groceries - house - car - clothes - eatingOut - savings;
+  const calc = amount - groceries - house - car - clothes - eatingOut - savings;
 
   return (
     <form className={classes.control}>
